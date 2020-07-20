@@ -2,6 +2,7 @@
     <element label="Service Order" max_length="40" name="x_468773_box_service_order" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Deal Registration ID" max_length="40" name="deal_registration_id" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Email" max_length="40" name="email" type="string"/>
+        <element label="Email test00" max_length="40" name="email_test00" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Enterprise ID" max_length="40" name="enterprise_id" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Name" max_length="40" name="name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Payment Frequency" max_length="40" name="payment_frequency" type="string"/>
