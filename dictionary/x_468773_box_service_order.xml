@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Service Order" max_length="40" name="x_468773_box_service_order" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Deal Registration ID" max_length="40" name="deal_registration_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Email" max_length="40" name="email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Enterprise ID" max_length="40" name="enterprise_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Name" max_length="40" name="name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Payment Frequency" max_length="40" name="payment_frequency" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Payment Method" max_length="40" name="payment_method" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Phone" max_length="40" name="phone" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Quote Number" max_length="40" name="quote_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Service Order PDF" max_length="32" name="service_order_pdf" reference="x_468773_box_service_order_pdf" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Service Renewal Date" max_length="40" name="service_renewal_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Service Start Date" max_length="40" name="service_start_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Tier 2 Partner" max_length="40" name="tier_2_partner" type="string"/>
+        <index name="index">
+            <element name="service_order_pdf"/>
+        </index>
+    </element>
+</database>

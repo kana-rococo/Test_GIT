@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_468773_box.RestMessagePDF</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>RestMessagePDF</name>
+        <script><![CDATA[var RestMessagePDF = Class.create();
+RestMessagePDF.prototype = {
+    initialize: function() {},
+
+    getFileIdByFileName: function(fileName) {
+        var sm = new sn_ws.RESTMessageV2("Get BOX PDF", "Get File ID");
+		
+        sm.setStringParameterNoEscape("file_name", fileName);
+
+        var response = sm.execute();
+        var responseBody = response.getBody();
+        var parsedResponseBody = JSON.parse(responseBody);
+
+        if (parsedResponseBody["total_count"] == 0) {
+            return "empty";
+        }
+
+        var fileId = parsedResponseBody["entries"][0]["id"];
+
+        return fileId;
+    },
+
+    getUrlTemplateByFileId: function(fileId) {
+        var sm = new sn_ws.RESTMessageV2("Get BOX PDF", "Get File Info");
+
+        sm.setStringParameterNoEscape("file_id", fileId);
+        response = sm.execute();
+        responseBody = response.getBody();
+        parsedResponseBody = JSON.parse(responseBody);
+
+        var urlTemplate = parsedResponseBody["representations"]["entries"][0]["content"]["url_template"];
+        urlTemplate = urlTemplate.slice(0, urlTemplate.length - 13);
+
+        return urlTemplate;
+    },
+
+    getFileContentByUrlTemplate: function(urlTemplate) {
+        var sm = new sn_ws.RESTMessageV2("Get BOX PDF", "Get PDF Representation");
+
+        sm.setStringParameterNoEscape("url_template", urlTemplate);
+        response = sm.execute();
+        content = response.getBody();
+
+        return content;
+    },
+
+
+    type: 'RestMessagePDF'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-10 06:56:46</sys_created_on>
+        <sys_id>40155094db6700108b40d426ca961987</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>RestMessagePDF</sys_name>
+        <sys_package display_value="BOX" source="x_468773_box">41298058db2700108b40d426ca961980</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BOX">41298058db2700108b40d426ca961980</sys_scope>
+        <sys_update_name>sys_script_include_40155094db6700108b40d426ca961987</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-11 08:19:41</sys_updated_on>
+    </sys_script_include>
+</record_update>

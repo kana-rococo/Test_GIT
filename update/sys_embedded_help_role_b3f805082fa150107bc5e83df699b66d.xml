@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="sn_dd_boxspoke_flowdesigner" name="sn_dd_boxspoke_flowdesigner">b7f805082fa150107bc5e83df699b669</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>r.avila</sys_created_by>
+        <sys_created_on>2020-06-17 02:02:43</sys_created_on>
+        <sys_id>b3f805082fa150107bc5e83df699b66d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b7f805082fa150107bc5e83df699b669</sys_name>
+        <sys_package display_value="BOX" source="x_468773_box">41298058db2700108b40d426ca961980</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BOX">41298058db2700108b40d426ca961980</sys_scope>
+        <sys_update_name>sys_embedded_help_role_b3f805082fa150107bc5e83df699b66d</sys_update_name>
+        <sys_updated_by>r.avila</sys_updated_by>
+        <sys_updated_on>2020-06-17 02:02:43</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

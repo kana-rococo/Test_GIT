@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_468773_box_service_order_pdf" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="x_468773_box_service_order_pdf" element="NULL" name="x_468773_box_service_order_pdf" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">77c71818db6700108b40d426ca96190c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-03-10 07:00:43</sys_created_on>
+            <sys_id>b3c71818db6700108b40d426ca96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-03-10 07:00:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_468773_box_service_order_pdf</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-03-10 07:00:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>77c71818db6700108b40d426ca96190c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_468773_box_service_order_pdf</sys_name>
+            <sys_package display_value="BOX" source="x_468773_box">41298058db2700108b40d426ca961980</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="BOX">41298058db2700108b40d426ca961980</sys_scope>
+            <sys_update_name>sys_ui_list_x_468773_box_service_order_pdf_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-03-10 07:00:43</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>
