@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>file_name</name>
+        <rest_message_function display_value="Get File ID">2cd2e1a0db2b40108b40d426ca9619d9</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-11 07:12:04</sys_created_on>
+        <sys_id>0cf3e1e0db2b40108b40d426ca961903</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>file_name</sys_name>
+        <sys_package display_value="BOX" source="x_468773_box">41298058db2700108b40d426ca961980</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BOX">41298058db2700108b40d426ca961980</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_0cf3e1e0db2b40108b40d426ca961903</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-11 08:09:47</sys_updated_on>
+        <type>string</type>
+        <value>contract.pdf</value>
+    </sys_rest_message_fn_parameters>
+</record_update>
