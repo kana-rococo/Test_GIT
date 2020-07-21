@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Service Order PDF" max_length="40" name="x_468773_box_service_order_pdf" type="collection">
+    <element label="Service Order PDF" max_length="40" name="x_468773_box_service_order_pdf" sizeclass="0" type="collection">
         <element display="true" label="BOX PDF Filename" mandatory="true" max_length="40" name="box_pdf_filename" type="string"/>
         <element active="false" label="BOX PDF ID" mandatory="true" max_length="40" name="box_pdf_id" type="string"/>
         <element label="PDF Content" max_length="4000" name="pdf_content" type="string"/>
