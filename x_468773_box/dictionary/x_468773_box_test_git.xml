@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="test Git" max_length="40" name="x_468773_box_test_git" type="collection"/>
+</database>
