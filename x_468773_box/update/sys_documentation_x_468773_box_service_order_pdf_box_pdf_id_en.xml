@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="box_pdf_id" label="BOX PDF ID" language="en" table="x_468773_box_service_order_pdf">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>box_pdf_id</element>
+            <help/>
+            <hint/>
+            <label>BOX PDF ID</label>
+            <language>en</language>
+            <name>x_468773_box_service_order_pdf</name>
+            <plural>BOX PDF IDs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-03-10 07:05:18</sys_created_on>
+            <sys_id>c27e636edb821010e665f36f299619a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>BOX PDF ID</sys_name>
+            <sys_package display_value="BOX" source="x_468773_box">41298058db2700108b40d426ca961980</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="BOX">41298058db2700108b40d426ca961980</sys_scope>
+            <sys_update_name>sys_documentation_x_468773_box_service_order_pdf_box_pdf_id_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-03-10 07:05:18</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

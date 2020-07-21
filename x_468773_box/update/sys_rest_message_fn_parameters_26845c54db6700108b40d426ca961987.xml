@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>url_template</name>
+        <rest_message_function display_value="Get PDF Representation">c9645054db6700108b40d426ca96190b</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-10 06:46:54</sys_created_on>
+        <sys_id>26845c54db6700108b40d426ca961987</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>url_template</sys_name>
+        <sys_package display_value="BOX" source="x_468773_box">41298058db2700108b40d426ca961980</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BOX">41298058db2700108b40d426ca961980</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_26845c54db6700108b40d426ca961987</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-10 06:46:54</sys_updated_on>
+        <type>string</type>
+        <value>https://public.boxcloud.com/api/2.0/internal_files/631148914270/versions/669241089070/representations/extracted_text/content/</value>
+    </sys_rest_message_fn_parameters>
+</record_update>

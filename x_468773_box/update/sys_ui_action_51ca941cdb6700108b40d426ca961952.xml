@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>Upload PDF</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Upload PDF</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[var script = new RestMessagePDF();
+var fileId = script.getFileIdByFileName(encodeURIComponent(current.box_pdf_filename));
+
+if (fileId == "empty") {
+    gs.addInfoMessage("File not found!");
+} else {
+    var urlTemplate = script.getUrlTemplateByFileId(fileId);
+    var content = script.getFileContentByUrlTemplate(urlTemplate);
+	current.pdf_content = content;
+    current.update();
+    action.setRedirectURL(current);
+
+    //PDFデータを新しいService Orderレコードとして挿入
+    var bso = new GlideRecord('x_468773_box_service_order');
+    bso.initialize();
+	
+	//PDFからの値を取得と設定 - Billing Terms
+    //Service Start Date
+    var convert_month = new ConvertMonthTxtToNum();
+    var service_start_date = content.substring(content.indexOf("Service Start Date1:") + 20).split(" ");
+    var service_start_day = service_start_date[2];
+    bso.service_start_date = service_start_date[3] + "-" + convert_month.getMonthNum(service_start_date[1]) + "-" + service_start_day.split(",");
+	
+	//Service Renewal Date
+    var service_renewal_date = content.substring(content.indexOf("Service Renewal Date:") + 21).split(" ");
+    var service_renewal_day = service_renewal_date[2];
+    bso.service_renewal_date = service_renewal_date[3] + "-" + convert_month.getMonthNum(service_renewal_date[1]) + "-" + service_renewal_day.split(",");
+
+	//Payment Frequency
+    var payment_frequency = content.slice(content.indexOf("Payment Frequency:"));
+    bso.payment_frequency = payment_frequency.slice(payment_frequency.indexOf("Payment Frequency:") + 18, payment_frequency.indexOf("\n"));
+	
+	//Payment Method
+    var payment_method = content.slice(content.indexOf("Payment Method:"));
+    bso.payment_method = payment_method.slice(payment_method.indexOf("Payment Method:") + 15, payment_method.indexOf("\n"));
+	
+	//Deal Registration ID
+    var deal_registration_id = content.slice(content.indexOf("Deal Registration ID:"));
+    bso.deal_registration_id = deal_registration_id.slice(deal_registration_id.indexOf("Deal Registration ID:") + 21, deal_registration_id.indexOf("\n"));
+
+	//Quote Number
+    var quote_number = content.slice(content.indexOf("Quote Number:"));
+    bso.quote_number = quote_number.slice(quote_number.indexOf("Quote Number:") + 13, quote_number.indexOf("\n"));
+	
+	//Enterprise ID
+    var enterprise_id = content.slice(content.indexOf("Enterprise ID:"));
+    bso.enterprise_id = enterprise_id.slice(enterprise_id.indexOf("Enterprise ID:") + 14, enterprise_id.indexOf("\n"));
+	
+	//Tier 2 Partner
+    var tier_2_partner = content.slice(content.indexOf("Tier 2 Partner:"));
+    bso.tier_2_partner = tier_2_partner.slice(tier_2_partner.indexOf("Tier 2 Partner:") + 15, tier_2_partner.indexOf("\n"));
+	
+	//PDFからの値を取得と設定 - Customer Contact
+    //Name
+    var name = content.slice(content.indexOf("Name:"));
+    bso.name = name.slice(name.indexOf("Name:") + 5, name.indexOf("\n"));
+	
+	//Email
+    var email = content.slice(content.indexOf("Email:"));
+    bso.email = email.slice(email.indexOf("Email:") + 6, email.indexOf("\n"));
+	
+	//Phone
+    var phone = content.slice(content.indexOf("Phone:"));
+    bso.phone = phone.slice(phone.indexOf("Phone:") + 6, phone.indexOf("\n"));
+	
+    bso.service_order_pdf = current.sys_id;
+    bso.insert();
+
+    gs.addInfoMessage("The following data has been inserted as a new record in the Service Orders table.");
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-10 07:19:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>51ca941cdb6700108b40d426ca961952</sys_id>
+        <sys_mod_count>60</sys_mod_count>
+        <sys_name>Upload PDF</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BOX" source="x_468773_box">41298058db2700108b40d426ca961980</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BOX">41298058db2700108b40d426ca961980</sys_scope>
+        <sys_update_name>sys_ui_action_51ca941cdb6700108b40d426ca961952</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-12 08:57:00</sys_updated_on>
+        <table>x_468773_box_service_order_pdf</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>
