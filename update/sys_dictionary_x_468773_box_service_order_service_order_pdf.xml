@@ -53,7 +53,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-03-12 08:04:30</sys_created_on>
-        <sys_id>fe79faf0dba700108b40d426ca96199f</sys_id>
+        <sys_id>5020848bdb021010e665f36f29961973</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Service Order PDF</sys_name>
         <sys_package display_value="BOX" source="x_468773_box">41298058db2700108b40d426ca961980</sys_package>
@@ -61,9 +61,19 @@
         <sys_scope display_value="BOX">41298058db2700108b40d426ca961980</sys_scope>
         <sys_update_name>sys_dictionary_x_468773_box_service_order_service_order_pdf</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-03-12 08:04:30</sys_updated_on>
+        <sys_updated_on>2020-07-21 00:57:34</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
+        <u_assigned_to/>
+        <u_description/>
+        <u_number/>
+        <u_opened_by/>
+        <u_parent_incident/>
+        <u_remarks/>
+        <u_short_description/>
+        <u_user_status/>
+        <u_work_notes/>
+        <u_work_notes_list/>
         <unique>false</unique>
         <use_dependent_field>false</use_dependent_field>
         <use_dynamic_default>false</use_dynamic_default>

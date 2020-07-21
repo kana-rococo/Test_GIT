@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-07-20 04:54:47</sys_created_on>
+        <sys_id>1adcefe62f0210107bc5e83df699b648</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_468773_box_test_table.x_468773_box.test_table_user</sys_name>
+        <sys_package display_value="BOX" source="x_468773_box">41298058db2700108b40d426ca961980</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BOX">41298058db2700108b40d426ca961980</sys_scope>
+        <sys_security_acl display_value="x_468773_box_test_table">46dcefe62f0210107bc5e83df699b644</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_1adcefe62f0210107bc5e83df699b648</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-07-20 04:54:47</sys_updated_on>
+        <sys_user_role display_value="x_468773_box.test_table_user" name="x_468773_box.test_table_user">0adcafe62f0210107bc5e83df699b65f</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>
